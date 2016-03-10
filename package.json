@@ -1,0 +1,26 @@
+{
+  "name": "prueba-grability",
+  "version": "1.0.0",
+  "description": "Prueba para cargo de Front-End en Grability",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brayansti/Prueba-FrontEnd-Grability.git"
+  },
+  "author": "Brayan Camargo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brayansti/Prueba-FrontEnd-Grability/issues"
+  },
+  "homepage": "https://github.com/brayansti/Prueba-FrontEnd-Grability#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-server": "^0.1.0",
+    "gulp-webserver": "^0.9.1"
+  }
+}
