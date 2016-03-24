@@ -26,11 +26,19 @@ header {
 
 .wrap-contenido {
   width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  min-height: 1000px; }
+
+.notice-intro,
+.notice-full {
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  -ms-animation-duration: 0.5s; }
 
 section.carga-notice {
   margin-top: 20px; }
   section.carga-notice article.notice-intro {
+    display: none;
     background-color: #fff;
     padding: 15px 0; }
     section.carga-notice article.notice-intro img {
