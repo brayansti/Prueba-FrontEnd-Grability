@@ -25,4 +25,34 @@ body{
 header{
     background-color: $rojo1;
     height: 80px;
+    .menu{
+        padding-top: 10px;
+    }
+}
+
+.wrap-contenido{
+    @extend .clear-b;
+    width: 90%;
+    margin: 0 auto;
+}
+section.carga-notice{
+    @extend .clear-b;
+    margin-top: 20px;
+    // Noticia introcuccion
+    article.notice-intro{
+        background-color: #fff;
+        padding: 15px 0;
+        img{
+            @include border-radius(50%);
+            display: block;
+            margin: 0 auto;
+            width: 64px;
+            height: 64px;
+            background-color: $verde1;
+        }
+    }
+    // Noticia Completa
+    article.notice-full{
+        display: none;
+    }
 }
