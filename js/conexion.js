@@ -1,3 +1,4 @@
+var datos =
 [
   {
     "id": 1,
@@ -18,9 +19,27 @@
     "image": "http://lorempixel.com/300/300"
   },
   {
-    "id": 4,
+    "id": 41,
     "title": "“NADA DE ECLIPSE, ATENTADO DE LA FAR DEJÓ SIN LUZ A LA LUNA”, DENUNCIA URIBE",
     "content": "Iracundo y desencajado, el expresidente Álvaro Uribe denunció hoy en rueda de prensa que la sombra que cubrió a la luna el pasado domingo en la noche fue un corte masivo de luz consecuencia de un atentado del frente “Compañera Laika” de las Farc.",
     "image": "http://lorempixel.com/300/300"
   }
 ]
+
+$(document).ready(function() {
+
+	$.ajax({
+		url : 'http://pruebagrability.comxa.com/recibe.php?callback=?',
+		type: 'GET',
+		dataType : 'jsonp',
+		jsonp: 'callback',
+		data : datos ,
+		success : function(respuesta) {
+            console.log(respuesta.mensaje);
+		},
+	});
+
+
+});
+
+// alert(datos[1].title);
