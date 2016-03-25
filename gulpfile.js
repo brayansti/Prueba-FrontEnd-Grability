@@ -31,13 +31,13 @@ gulp.task('templates', function() {
 });
 
 
-//  conf web server
 gulp.task('server', function() {
   gulp.src('')
     .pipe(webserver({
-      //host: '192.168.12.144',
-      port: 6060,
-      livereload: true
+        port: 8080,
+        //host: '192.168.12.144',
+        livereload: true,
+        open: true
     }));
 });
 
