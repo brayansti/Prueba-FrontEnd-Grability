@@ -8,7 +8,7 @@ html(lang="en")
 		link(rel="stylesheet", href="css/animate.css")
 		link(rel="stylesheet", href="css/main.css")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
-	body
+	body(ng-app="appGrability")
 		.container.animated.bounceInUp
 			header
 				.row
@@ -17,7 +17,7 @@ html(lang="en")
 							a(href="#")
 								figure
 									img(src="../img/icon-menu.svg",alt="")
-			.wrap-contenido
+			.wrap-contenido(ng-controller="controlCarga")
 				section.row.carga-notice
 					article.col.s12.m12.l12.notice-intro
 						.col.s3.m3.l2
@@ -26,7 +26,11 @@ html(lang="en")
 									img(src="", alt="")
 						.col.s9.m9.l10
 							h2
-								| Titulo
+								| Titulo → {{pruebaDato}}
+								table(ng-repeat= datos in news_mock)
+								
+									
+									
 					article.col.s12.m12.l12.notice-full
 						.row
 							.col.s4.m4.l4
@@ -59,5 +63,7 @@ html(lang="en")
 	// Scripts 
 	script(src="https://code.jquery.com/jquery-2.1.1.min.js")
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js")
+	script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js")
 	script(src="js/scripts.js")
 	script(src="js/conexion.js")
+	script(src="angular/app.js")
