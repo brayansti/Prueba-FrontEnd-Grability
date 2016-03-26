@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/main.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
-  <body>
+  <body ng-app="appGrability">
     <div class="container animated bounceInUp">
       <header>
         <div class="row">
@@ -19,13 +19,15 @@
           </div>
         </div>
       </header>
-      <div class="wrap-contenido">
+      <div ng-controller="controlCarga" class="wrap-contenido">
         <section class="row carga-notice">
           <article class="col s12 m12 l12 notice-intro">
             <div class="col s3 m3 l2"><a href="#">
                 <figure><img src="" alt=""/></figure></a></div>
             <div class="col s9 m9 l10">
-              <h2>Titulo</h2>
+              <h2>Titulo → {{pruebaDato}}
+                <table in="in" news_mock="news_mock"></table>
+              </h2>
             </div>
           </article>
           <article class="col s12 m12 l12 notice-full">
@@ -66,6 +68,8 @@
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
   <script src="js/scripts.js"></script>
   <script src="js/conexion.js"></script>
+  <script src="angular/app.js"></script>
 </html>
