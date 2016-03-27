@@ -18,14 +18,15 @@ html(lang="en")
 								figure
 									img(src="../img/icon-menu.svg",alt="")
 			.wrap-contenido
-				section.row.carga-notice(ng-repeat="datos in dataJson", ng-show='datos.show')
-					article.col.s12.m12.l12.notice-intro
+				section.row.carga-notice(ng-repeat="datos in dataJson")
+					article.col.s12.m12.l12.notice-intro(ng-click="toggleCustom()")
 						.col.s3.m3.l2
 							a(href="#")
 								figure
 									img(src="{{datos.image}}", alt="")
 						.col.s9.m9.l10
 							h2
+								//- Formato del resultado a 4 palablas
 								| {{datos.title.split(" ", 4).toString().split(",").join(" ")}} ...
 					article.col.s12.m12.l12.notice-full
 						.row
@@ -42,5 +43,5 @@ html(lang="en")
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js")
 	script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js")
 	script(src="js/scripts.js")
-	script(src="js/conexion.js")
 	script(src="angular/app.js")
+	script(src="js/conexion.js")

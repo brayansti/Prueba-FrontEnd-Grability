@@ -20,12 +20,13 @@
         </div>
       </header>
       <div class="wrap-contenido">
-        <section ng-repeat="datos in dataJson" ng-show="datos.show" class="row carga-notice">
-          <article class="col s12 m12 l12 notice-intro">
+        <section ng-repeat="datos in dataJson" class="row carga-notice">
+          <article ng-click="toggleCustom()" class="col s12 m12 l12 notice-intro">
             <div class="col s3 m3 l2"><a href="#">
                 <figure><img src="{{datos.image}}" alt=""/></figure></a></div>
             <div class="col s9 m9 l10">
-              <h2>{{datos.title.split(" ", 4).toString().split(",").join(" ")}} ...</h2>
+              <h2>{{datos.title.split(" ", 4).toString().split(",").join(" ")}} ...
+              </h2>
             </div>
           </article>
           <article class="col s12 m12 l12 notice-full">
@@ -48,6 +49,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
   <script src="js/scripts.js"></script>
-  <script src="js/conexion.js"></script>
   <script src="angular/app.js"></script>
+  <script src="js/conexion.js"></script>
 </html>
