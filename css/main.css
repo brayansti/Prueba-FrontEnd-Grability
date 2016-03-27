@@ -39,16 +39,25 @@ header {
 
 .notice-intro,
 .notice-full {
-  -webkit-animation-duration: 0.5s;
-  -moz-animation-duration: 0.5s;
-  -ms-animation-duration: 0.5s; }
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
 
 section.carga-notice {
   margin-top: 20px; }
   section.carga-notice article.notice-intro {
-    display: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
     background-color: #fff;
     padding: 15px 0; }
+    section.carga-notice article.notice-intro:hover {
+      -webkit-box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.25);
+      -moz-box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.25);
+      box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.25); }
     section.carga-notice article.notice-intro img {
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
@@ -60,8 +69,12 @@ section.carga-notice {
       height: 64px;
       background-color: #c7f04b; }
     section.carga-notice article.notice-intro h2 {
-      margin-top: 20px;
-      font-size: 3em; }
+      margin-top: 15px;
+      margin-bottom: 10px;
+      font-size: 2rem;
+      text-transform: lowercase; }
+      section.carga-notice article.notice-intro h2::first-letter {
+        text-transform: uppercase; }
   section.carga-notice article.notice-full {
     padding: 0;
     margin-top: 10px;
@@ -72,4 +85,5 @@ section.carga-notice {
       height: 275px;
       background-color: #2fc3cb; }
     section.carga-notice article.notice-full h3 {
+      font-size: 2rem;
       margin-top: 20px; }

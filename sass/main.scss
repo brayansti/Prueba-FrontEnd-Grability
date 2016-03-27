@@ -42,9 +42,7 @@ header{
 
 .notice-intro,
 .notice-full{
-    -webkit-animation-duration: 0.5s;
-    -moz-animation-duration: 0.5s;
-    -ms-animation-duration: 0.5s;
+    @include transition(0.3);
 }
 
 section.carga-notice{
@@ -52,9 +50,15 @@ section.carga-notice{
     margin-top: 20px;
     // Noticia introcuccion
     article.notice-intro{
-        display: none;
+        @include transition(0.3);
+        cursor: pointer;
         background-color: #fff;
         padding: 15px 0;
+        &:hover{
+            -webkit-box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.25);
+            -moz-box-shadow:    4px 4px 10px 0px rgba(50, 50, 50, 0.25);
+            box-shadow:         4px 4px 10px 0px rgba(50, 50, 50, 0.25);
+        }
         img{
             @include border-radius(50%);
             display: block;
@@ -64,8 +68,13 @@ section.carga-notice{
             background-color: $verde1;
         }
         h2{
-            margin-top: 20px;
-            font-size: 3em;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: 2rem;
+            text-transform: lowercase;
+            &::first-letter{
+                text-transform: uppercase;
+            }
         }
     }
     // Noticia Completa
@@ -80,6 +89,7 @@ section.carga-notice{
             background-color: $azul2;
         }
         h3{
+            font-size: 2rem;
             margin-top: 20px;
         }
     }

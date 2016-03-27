@@ -12,7 +12,4 @@ $(document).ready(function() {
 		$(this).closest('.carga-notice').find('.notice-full').toggle();
 		notiFull.addClass('animated bounceInDown');
 	});
-
-
-menu.trigger( "click" );
 });
