@@ -1,8 +1,8 @@
 var app = angular.module("appGrability",[]);
 
-app.controller("controlCarga", function ($scope, $http) {
+app.controller("controlCarga", function ($scope) {
 
-	// ajax
+	// ajax consulta
 	$.ajax({
 		url : 'http://pruebagrability.comxa.com/recibe.php',
 		type: 'GET',
@@ -15,8 +15,11 @@ app.controller("controlCarga", function ($scope, $http) {
 	});
 	// Ajax Fin
 
+});
+
+app.controller("showNoti", function ($scope) {
 	$scope.custom = true;
-	$scope.toggleCustom = function() {
+	$scope.toggleNotis = function() {
 		$scope.custom = $scope.custom === false ? true: false;
 	};
 

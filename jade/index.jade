@@ -18,17 +18,17 @@ html(lang="en")
 								figure
 									img(src="../img/icon-menu.svg",alt="")
 			.wrap-contenido
-				section.row.carga-notice(ng-repeat="datos in dataJson")
-					article.col.s12.m12.l12.notice-intro(ng-click="toggleCustom()")
+				section.row.carga-notice.animated.bounceInLeft(ng-repeat="datos in dataJson", ng-controller="showNoti")
+					article.col.s12.m12.l12.notice-intro(ng-click="toggleNotis()")
 						.col.s3.m3.l2
-							a(href="#")
+							a(href="")
 								figure
 									img(src="{{datos.image}}", alt="")
 						.col.s9.m9.l10
 							h2
 								//- Formato del resultado a 4 palablas
 								| {{datos.title.split(" ", 4).toString().split(",").join(" ")}} ...
-					article.col.s12.m12.l12.notice-full
+					article.col.s12.m12.l12.notice-full.animated.bounceInDown(ng-hide="custom")
 						.row
 							.col.s4.m4.l4
 								img(src="{{datos.image}}", alt="")
@@ -43,5 +43,10 @@ html(lang="en")
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js")
 	script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js")
 	script(src="js/scripts.js")
-	script(src="angular/app.js")
-	script(src="js/conexion.js")
+	
+	//- Datos descargados de un api externo en el archivo conexion.js
+	script(src="angular/conexion.js")
+
+	//- Datos tomados del json localmente con el archivo app.js
+	//- Comentar conexion.js y descomentar app.js para ver que sigue funcionando la aplicacion con Json local
+	//- script(src="angular/app.js")

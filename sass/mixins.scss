@@ -4,6 +4,14 @@
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
+
+@mixin transition ($tiempo:.5) {
+    -webkit-transition: all $tiempo+s ease-in-out;
+    -moz-transition: all $tiempo+s ease-in-out;
+    -o-transition: all $tiempo+s ease-in-out;
+    transition: all $tiempo+s ease-in-out;
+}
+
 .clear-b{
     &::after,&::before{
         display: table;
