@@ -9,57 +9,34 @@ html(lang="en")
 		link(rel="stylesheet", href="css/main.css")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 	body(ng-app="appGrability")
-		.container.animated.bounceInUp
+		.container.animated.bounceInUp(ng-controller="controlCarga")
 			header
 				.row
 					.col.s2.m2.l2
-						.menu
+						.menu(ng-click='menu()')
 							a(href="#")
 								figure
 									img(src="../img/icon-menu.svg",alt="")
-			.wrap-contenido(ng-controller="controlCarga")
-				section.row.carga-notice
+			.wrap-contenido
+				section.row.carga-notice(ng-repeat="datos in dataJson", ng-show='datos.show')
 					article.col.s12.m12.l12.notice-intro
 						.col.s3.m3.l2
 							a(href="#")
 								figure
-									img(src="", alt="")
+									img(src="{{datos.image}}", alt="")
 						.col.s9.m9.l10
 							h2
-								| Titulo → {{pruebaDato}}
-								table(ng-repeat= datos in news_mock)
-								
-									
-									
+								| {{datos.title.split(" ", 4).toString().split(",").join(" ")}} ...
 					article.col.s12.m12.l12.notice-full
 						.row
 							.col.s4.m4.l4
-								img(src="", alt="")
+								img(src="{{datos.image}}", alt="")
 							.col.s8.m8.l8
 								.col.s12.m12.l12
 									h3
-										| SubTitle
+										| {{datos.title}}
 									p
-										| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eos nesciunt, nulla excepturi quis consequatur nihil ipsum aliquam maxime voluptatibus et velit impedit ut eligendi distinctio sapiente iure voluptatum amet, nostrum laudantium! Nihil expedita eligendi odio optio, harum ratione aut.
-				section.row.carga-notice
-					article.col.s12.m12.l12.notice-intro
-						.col.s3.m3.l2
-							a(href="#")
-								figure
-									img(src="", alt="")
-						.col.s9.m9.l10
-							h2
-								| Titulo
-					article.col.s12.m12.l12.notice-full
-						.row
-							.col.s4.m4.l4
-								img(src="", alt="")
-							.col.s8.m8.l8
-								.col.s12.m12.l12
-									h3
-										| SubTitle
-									p
-										| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eos nesciunt, nulla excepturi quis consequatur nihil ipsum aliquam maxime voluptatibus et velit impedit ut eligendi distinctio sapiente iure voluptatum amet, nostrum laudantium! Nihil expedita eligendi odio optio, harum ratione aut.
+										| {{datos.content}}
 	// Scripts 
 	script(src="https://code.jquery.com/jquery-2.1.1.min.js")
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js")

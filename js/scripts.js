@@ -14,5 +14,5 @@ $(document).ready(function() {
 	});
 
 
-menu.trigger( "click" );
+// menu.trigger( "click" );
 });
