@@ -18,6 +18,7 @@ body{
 }
 .container{
     @include border-radius(15px);
+    max-width: 1000px;
     margin-top: 50px;
     -webkit-animation-duration: 0.5s;
     -moz-animation-duration: 0.5s;
